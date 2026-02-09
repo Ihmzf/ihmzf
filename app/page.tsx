@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { FaEnvelope, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import ThemeToggle from './components/ThemeToggle';
 
 export default function Home() {
   const [displayedText, setDisplayedText] = useState('');
-  const [showCursor, setShowCursor] = useState(true);
   const fullText = 'Hamza';
 
   useEffect(() => {
@@ -30,6 +30,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col justify-between px-6 py-12 md:px-12 md:py-16 lg:px-24 lg:py-20 max-w-4xl mx-auto relative z-10">
+      {/* Theme Toggle */}
+      <div className="absolute top-6 right-6 md:top-8 md:right-8 lg:top-10 lg:right-10">
+        <ThemeToggle />
+      </div>
+
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center">
         <div className="space-y-6">
@@ -47,7 +52,7 @@ export default function Home() {
           {/* Tagline */}
           <div className="space-y-1 pt-4 border-l-2 border-border pl-4">
             <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
-              <span className="text-accent-dim">//</span> I love to read history, mathematics, philosophy, sci-fi + technical books.
+              <span className="text-accent-dim">{'//'}</span> I love to read history, mathematics, philosophy, sci-fi + technical books.
             </p>
           </div>
 
