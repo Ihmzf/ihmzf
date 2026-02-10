@@ -6,7 +6,7 @@ import { FaEnvelope, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 export default function Home() {
   const [displayedText, setDisplayedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  const fullText = 'Terminal';
+  const fullText = 'Lithio';
 
   useEffect(() => {
     let currentIndex = 0;
